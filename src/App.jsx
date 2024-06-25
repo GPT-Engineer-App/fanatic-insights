@@ -9,7 +9,14 @@ function App() {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route 
+          path="/profile" 
+          element={
+            <SharedLayout>
+              <Profile />
+            </SharedLayout>
+          } 
+        />
         <Route 
           path="/" 
           element={
